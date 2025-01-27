@@ -1,33 +1,18 @@
-var myImage = document.querySelector("img"); // Use querySelector to get the reference
-
-myImage.onclick = function () {
-    let mySrc = myImage.getAttribute("src");
-    if (mySrc === "images/firefox_png.webp") {
-        myImage.setAttribute("src", "images/google-icon.png");
-    } else {
-        myImage.setAttribute("src", "images/firefox_png.webp");
+async function fetchData() {
+    try {
+        
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase()
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+        if (!response.ok) {
+            throw new Error("Could not fetch resource");
+        }
+        const data = await response.json()
+        const pokemonSprite = data.sprites.front_default
+        const imgElement = document.getElementById("pokemonSprite")
+        imgElement.src = pokemonSprite
+        imgElement.style.display = "block"
+    }
+    catch (err) {
+        console.error(err)
     }
 }
-
-var myButton = document.querySelector("button");
-var myHeading = document.querySelector("h1");
-
-function setUserName() {
-    let myName = prompt("Please enter your name.");
-    if (!myName || myName === null) {
-        setUserName();
-    }
-    localStorage.setItem("name", myName);
-    myHeading.innerHTML = "Mozilla is cool, " + myName;
-}
-
-if (!localStorage.getItem("name")) {
-    setUserName();
-} else {
-    let storedName = localStorage.getItem("name");
-    myHeading.innerHTML = "Mozilla is cool, " + storedName;
-}
-
-myButton.onclick = function () {
-    setUserName();
-};
