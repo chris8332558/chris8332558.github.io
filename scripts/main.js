@@ -1,18 +1,10 @@
-async function fetchData() {
-    try {
-        
-        const pokemonName = document.getElementById("pokemonName").value.toLowerCase()
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-        if (!response.ok) {
-            throw new Error("Could not fetch resource");
-        }
-        const data = await response.json()
-        const pokemonSprite = data.sprites.front_default
-        const imgElement = document.getElementById("pokemonSprite")
-        imgElement.src = pokemonSprite
-        imgElement.style.display = "block"
-    }
-    catch (err) {
-        console.error(err)
-    }
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Here you would typically send the form data to a server
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
+    });
+});
