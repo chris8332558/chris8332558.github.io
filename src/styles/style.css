@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 2rem;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .project-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: calc(33.333% - 1rem);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
