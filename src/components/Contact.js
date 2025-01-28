@@ -1,5 +1,5 @@
 function Contact() {
-    const { createElement, setState, getState } = PortfolioLib;
+    const { createElement, setState, getState } = Bricker;
     
     function handleSubmit(e) {
       e.preventDefault();

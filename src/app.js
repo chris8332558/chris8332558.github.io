@@ -1,4 +1,4 @@
-const { render, subscribe, createElement } = PortfolioLib;
+const { render, subscribe, createElement } = Bricker;
 
 function App() {
   return createElement("div", {}, [Header(), About(), Projects(), Contact()]);

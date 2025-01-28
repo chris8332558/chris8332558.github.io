@@ -1,8 +1,10 @@
-const PortfolioLib = (function() {
-    let state = {};
-    let listeners = [];
+const Bricker = (function() {
+    // State Management
+    let state = {}; // Initialize an empty state boject
+    let listeners = []; // Initialize an array to store state change listeners
 
     // Library code goes here
+    // Create a DOM element with the specified tag, attributes, and childern
     function createElement(tag, attributes = {}, children = []) {
         const element = document.createElement(tag);
         Object.entries(attributes).forEach(([key, value]) => {
@@ -27,6 +29,7 @@ const PortfolioLib = (function() {
         container.appendChild(component());
     }
 
+    // Update the state and notify all listeners
     function setState(newState) {
         state = { ...state, ...newState}
         listeners.forEach(listener => listener(state));

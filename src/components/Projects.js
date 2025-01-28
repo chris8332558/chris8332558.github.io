@@ -1,10 +1,10 @@
 function Projects() {
-  const { createElement, getState, useEffect } = PortfolioLib;
+  const { createElement, getState, useEffect } = Bricker;
 
   useEffect(() => {
     // Simulating data fetching
     setTimeout(() => {
-        PortfolioLib.setState({ projects: [
+        Bricker.setState({ projects: [
             { id: 1, title: "Project 1", description: "Description 1"},
             { id: 2, title: "Project 2", description: "Description 2"},
             { id: 3, title: "Project 3", description: "Description 3"}

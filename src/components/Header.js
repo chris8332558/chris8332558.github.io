@@ -1,5 +1,5 @@
 function Header() {
-  const { createElement } = PortfolioLib;
+  const { createElement } = Bricker;
 
   return createElement("header", {}, [
     createElement("h1", {}, ["My Portfolio"]),
