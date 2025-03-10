@@ -7,12 +7,36 @@
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
-    <div id="root"></div>
-    <script src="src/lib/Bricker.js"></script>
-    <script src="src/components/Header.js"></script>
-    <script src="src/components/About.js"></script>
-    <script src="src/components/Projects.js"></script>
-    <script src="src/components/Contact.js"></script>
-    <script src="src/app.js"></script>
+    <div class="testClass">
+        <h1>I am h1 header</h1>
+        <p>normal text</p>
+        <h2>I am h2 header</h2>
+    </div>
+
+    <div style="color: darkred; border: 2px dotted black; border-top: 2px solid;
+        border-left: double; border-right: double;
+        border-radius: 4px;
+        background: gold"
+    >
+        I'm red. This div has a border.
+        <div>I'm also red, but without a border</div>
+        <div style="color: black;">Color overriden</div>
+    </div>
+
+    <div class="section1">Section 1</div>
+    <div class="section1", id="first">Section 1 - first</div>
+    <div class="section1", id="second">Section 1 - second</div>
+    <div class="section2">Section 2</div>
+
+    <ul>
+        <li>A</li>
+        <li class="list-b">B</li>
+        <li>C</li>
+    </ul>
+
+    <div class="button-group">
+        <button class="btn-1"><img src="images/imgPlaceHolder.jpg">The Button 1</button>
+        <button class="btn-2">The Button 2</button>
+    </div>
 </body>
 </html>
